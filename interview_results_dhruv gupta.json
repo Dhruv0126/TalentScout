@@ -1,0 +1,79 @@
+{
+  "candidate": {
+    "name": "dhruv gupta",
+    "email": "dhruv06012@gmail.com",
+    "phone": "7906217819",
+    "experience": 2,
+    "role": "Data Scientist",
+    "skills": [
+      "Python",
+      "Flask",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Can you describe a time when you had to perform feature engineering on a dataset? What techniques did you use and why?"
+    },
+    {
+      "id": 2,
+      "question": "How do you approach model selection and hyperparameter tuning for a machine learning problem? Can you give an example of a time when you used a particular technique to improve model performance?"
+    },
+    {
+      "id": 3,
+      "question": "Can you walk us through your process for deploying a machine learning model using Flask and Docker? How do you ensure that the model is properly integrated with the front-end application?"
+    },
+    {
+      "id": 4,
+      "question": "How do you handle imbalanced datasets in machine learning? Can you describe a time when you used a particular technique, such as oversampling or undersampling, to improve model performance?"
+    },
+    {
+      "id": 5,
+      "question": "Can you explain the concept of explainability in machine learning and how you would implement it in a real-world project using techniques such as SHAP or LIME? Why is explainability important in machine learning?"
+    }
+  ],
+  "conversation": [
+    {
+      "role": "user",
+      "content": "jh rflfp"
+    },
+    {
+      "role": "assistant",
+      "content": "Answer recorded."
+    },
+    {
+      "role": "user",
+      "content": "ndfbv hv"
+    },
+    {
+      "role": "assistant",
+      "content": "Answer recorded."
+    },
+    {
+      "role": "user",
+      "content": "vfdf vd"
+    },
+    {
+      "role": "assistant",
+      "content": "Answer recorded."
+    },
+    {
+      "role": "user",
+      "content": " dfv "
+    },
+    {
+      "role": "assistant",
+      "content": "Answer recorded."
+    },
+    {
+      "role": "user",
+      "content": "df "
+    },
+    {
+      "role": "assistant",
+      "content": "Answer recorded."
+    }
+  ]
+}
