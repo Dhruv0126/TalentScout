@@ -3,8 +3,6 @@
 
 An AI-powered interview platform that generates personalized technical questions using Groq's Llama 3.1 model, designed to streamline technical candidate assessments.
 
-![TalentScout AI Demo](demo-screenshot.png) <!-- Add actual screenshot later -->
-
 ## 🚀 Key Features
 
 1. AI-Powered Question Generation
