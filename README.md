@@ -1,9 +1,5 @@
 ```markdown
-# TalentScout AI Interview Assistant 🤖
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B.svg?logo=streamlit)](https://streamlit.io/)
+## TalentScout AI Interview Assistant 🤖
 
 An AI-powered interview platform that generates personalized technical questions using Groq's Llama 3.1 model, designed to streamline technical candidate assessments.
 
@@ -11,15 +7,15 @@ An AI-powered interview platform that generates personalized technical questions
 
 ## 🚀 Key Features
 
-- **AI-Powered Question Generation**  
+1. AI-Powered Question Generation
   Dynamic interview questions based on candidate skills and experience
-- **Tech Stack Declaration**  
+2. Tech Stack Declaration
   Multi-category skill selection across 5 technical domains
-- **Interactive Chat Interface**  
+3. Interactive Chat Interface  
   Real-time interview simulation with conversation logging
-- **Session Recording**  
+4. Session Recording  
   Automatic JSON export of complete interview sessions
-- **Smart Exit System**  
+5. Smart Exit System
   Natural language commands to end sessions (`exit/quit/bye`)
 
 ## ⚙️ Installation
