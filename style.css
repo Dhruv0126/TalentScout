@@ -1,58 +1,63 @@
 /* style.css */
 body {
-    background-color: #0E1117;
+    background-color: #1a0025;
     color: #FFFFFF;
 }
 
 .stButton>button {
-    background-color: #00FF00;
-    color: #0E1117;
+    background-color: #a259ff;
+    color: #FFFFFF;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
+    border: none;
 }
 
 .stTextInput>div>div>input {
-    background-color: #1E1E1E;
+    background-color: #2d014d;
     color: #FFFFFF;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid #a259ff;
 }
 
 .stSelectbox>div>div>select {
-    background-color: #1E1E1E;
+    background-color: #2d014d;
     color: #FFFFFF;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid #a259ff;
 }
 
 .stNumberInput>div>div>input {
-    background-color: #1E1E1E;
+    background-color: #2d014d;
     color: #FFFFFF;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid #a259ff;
 }
 
 .stMultiselect>div>div>div {
-    background-color: #1E1E1E;
+    background-color: #2d014d;
     color: #FFFFFF;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid #a259ff;
 }
 
 .stHeader {
-    color: #00FF00;
+    color: #a259ff;
 }
 
 .stSubheader {
-    color: #00FF00;
+    color: #a259ff;
 }
 
 .stSuccess {
-    color: #00FF00;
+    color: #a259ff;
 }
 
 .stWarning {
-    color: #FF0000;
+    color: #ff4b4b;
 }

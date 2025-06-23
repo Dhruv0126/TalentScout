@@ -79,8 +79,33 @@ class TalentScoutGroq:
         st.success(f"Interview results saved to {filename}")
 
     def run_streamlit_app(self):
-        st.title("TalentScout AI Interview Chat")
-        
+        st.markdown(
+            '''
+            <style>
+            .gradient-title {
+                font-size: 2.8rem;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 0.5em;
+                background: linear-gradient(270deg, #7C4DFF, #8F00FF, #563C5C, #00FFEA, #FF61A6, #7C4DFF);
+                background-size: 200% 200%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 2px 8px rgba(44,0,60,0.18);
+                animation: gradientMove 4s ease-in-out infinite;
+            }
+            @keyframes gradientMove {
+                0% {background-position: 0% 50%;}
+                50% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}
+            }
+            </style>
+            <h1 class="gradient-title">TalentScout AI Interview Chat</h1>
+            ''',
+            unsafe_allow_html=True
+        )
         # Sidebar with instructions
         st.sidebar.title("Instructions")
         st.sidebar.markdown(
@@ -88,12 +113,15 @@ class TalentScoutGroq:
             "During the interview, if you wish to exit, simply type **exit**, **quit**, or **bye** in the chat input."
         )
 
-        st.markdown("""
-            <div style="background-color: #0E1117; padding: 10px; border-radius: 10px;">
-                <h2 style="color: #00FF00;">Welcome to TalentScout AI</h2>
-                <p style="color: #FFFFFF;">Your AI-powered interview assistant.</p>
+        st.markdown(
+            """
+            <div style="background: linear-gradient(90deg, #563C5C 0%, #7C4DFF 100%); padding: 16px; border-radius: 12px; margin-bottom: 1.5em; text-align:center;">
+                <h2 style="color: #FFFFFF; font-size: 2rem; font-weight: 600; margin-bottom: 0.2em;">Welcome to <span style='color:#7C4DFF;'>TalentScout AI</span></h2>
+                <p style="color: #F3EFFF; font-size: 1.1rem;">Your AI-powered interview assistant.</p>
             </div>
-        """, unsafe_allow_html=True)
+            """,
+            unsafe_allow_html=True
+        )
 
         # Candidate Information Form
         with st.container():
@@ -142,13 +170,18 @@ class TalentScoutGroq:
             for msg in conv:
                 with st.chat_message(msg["role"]):
                     st.write(msg["content"])
-            
-            # Display the next question if available
+
+            # If we need to ask the next question
             if current_index < len(questions):
-                current_question = questions[current_index]
-                with st.chat_message("assistant"):
-                    st.write(f"Q{current_question['id']}: {current_question['question']}")
-                
+                # If the last message is not the current question, append it
+                if not (len(conv) > 0 and conv[-1]["role"] == "assistant" and conv[-1]["content"].startswith(f"Q{questions[current_index]['id']}:")):
+                    conv.append({
+                        "role": "assistant",
+                        "content": f"Q{questions[current_index]['id']}: {questions[current_index]['question']}"
+                    })
+                    st.session_state["conversation"] = conv
+                    st.rerun()
+
                 answer = st.chat_input("Type your answer here...")
                 if answer:
                     # Check for conversation-ending keywords
@@ -165,7 +198,6 @@ class TalentScoutGroq:
                         st.session_state["conversation"].append({"role": "user", "content": answer})
                         st.session_state["conversation"].append({"role": "assistant", "content": "Answer recorded."})
                         st.session_state["current_question"] += 1
-                        
                         # If all questions have been answered, conclude the interview
                         if st.session_state["current_question"] >= len(questions):
                             st.success("You have answered all the questions!")
@@ -175,6 +207,7 @@ class TalentScoutGroq:
                                 questions=st.session_state.get("questions", []),
                                 conversation=st.session_state.get("conversation", [])
                             )
+                        st.rerun()
 
 def main():
     talent_scout = TalentScoutGroq()
