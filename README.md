@@ -1,4 +1,9 @@
-```markdown
+# TalentScout
+
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-blueviolet?logo=streamlit)](https://talentscout-dhruv0126.streamlit.app/)
+
+Access the live deployed app here: [https://talentscout-dhruv0126.streamlit.app/](https://talentscout-dhruv0126.streamlit.app/)
+
 ## TalentScout AI Interview Assistant 🤖
 
 An AI-powered interview platform that generates personalized technical questions using Groq's Llama 3.1 model, designed to streamline technical candidate assessments.
