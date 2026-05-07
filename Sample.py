@@ -13,18 +13,17 @@ from nltk.tokenize import word_tokenize
 import pandas as pd
 
 load_dotenv()
-# Access the Groq API key
+# Access the Groq API key from environment or Streamlit secrets
 groq_api_key = os.getenv('GROQ_API_KEY')
+if not groq_api_key:
+    try:
+        groq_api_key = st.secrets['GROQ_API_KEY']
+    except Exception:
+        groq_api_key = None
 
 if not groq_api_key:
-    st.error("GROQ_API_KEY not found in environment variables.")
+    st.error("GROQ_API_KEY not found in environment variables or Streamlit secrets.")
     st.stop()
-
-
-if groq_api_key:
-    print("Groq API Key Loaded Successfully")
-else:
-    print("Groq API Key Missing")
 
 # Custom CSS for tech-themed design
 def local_css(file_name):
