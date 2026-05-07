@@ -1,6 +1,6 @@
 # TalentScout
 
-[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-blueviolet?logo=streamlit)](https://talentscout-dhruv0126.streamlit.app/)
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-blueviolet?logo=streamlit)](https://talentscout-dhruv6012.streamlit.app/)
 
 Access the live deployed app here: [https://talentscout-dhruv0126.streamlit.app/](https://talentscout-dhruv0126.streamlit.app/)
 
